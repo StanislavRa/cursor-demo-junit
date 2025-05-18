@@ -26,11 +26,17 @@ Add a `/health` endpoint and JUnit 5 test to a Fastify‑based service, includi
    }
    ```
 
-3. **Pin the database schema**
+3. **System prompt**
 
-   In Composer click **📎 Pin file** and select `schema.sql`.
+   ```txt
+   You are a senior engineer. Do not say you are an AI.
+   ```
 
-4. **Run the agent**
+4. **Pin the database schema**
+
+   In Composer click **Add context** and after **Files & Folders**, then select `schema.sql`.
+
+5. **Run the agent**
 
    ```txt
    Add a /health endpoint to our Fastify 5 service and a JUnit 5 test.
@@ -39,7 +45,7 @@ Add a `/health` endpoint and JUnit 5 test to a Fastify‑based service, includi
    use psql
    ```
 
-5. **Loop logic**
+6. **Loop logic**
 
    Agent edits code → `junit → mvn test` → fixes failures → repeats  
    `psql` provides live table structure so SQL is type‑safe.
