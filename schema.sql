@@ -1,9 +1,6 @@
-docker exec -i demo_c_postgres psql -U app -d app <<'SQL'
 CREATE TABLE payments (
-  id          serial PRIMARY KEY,
-  user_id     int,
-  amount      numeric(10,2),
-  created_at  timestamp default now()
+  id SERIAL PRIMARY KEY,
+  user_id INT,
+  amount NUMERIC(10,2),
+  created_at TIMESTAMP DEFAULT NOW()
 );
-\q
-SQL
